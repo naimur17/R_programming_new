@@ -23,13 +23,13 @@ dbinom(x=3,size=20,prob = 1/6)
 dbinom(x=0:3,size=20,prob = 1/6)
 #we use dbinom to find the value
 
-#when x>=3 then we use
+#when x<=3 then we use
 sum(dbinom(x=0:3,size=20,prob = 1/6))
 
 #or we can use the pbinom
 pbinom(q=3,size = 20,prob = 1/6,lower.tail = T)
 
-#when x<=3 then we use
+#when x>=3 then we use
 
 pbinom(q=3,size = 20,prob = 1/6,lower.tail = F)
 
@@ -45,13 +45,13 @@ dpois(x=3,lambda = 7)
 
 dpois(x=0:3,lambda = 7)
 
-#now (x>=3) then we calculate
+#now (x<=3) then we calculate
 
 sum(dpois(x=0:3,lambda = 7))
 
 #we use ppois for the value
 ppois(q=3,lambda = 7,lower.tail = T)
 
-#for (x<=3) we use 
+#for (x>=3) we use 
 ppois(q=3,lambda = 7,lower.tail = F)
 
